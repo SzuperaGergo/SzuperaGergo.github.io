@@ -68,23 +68,19 @@ data.forEach(loadinThumbnails)
 loadphoto(currentphoto)
 
 $('.arrow.right').click(() => {
-    $('.selected').removeClass('selected');
     currentphoto++;
     if (currentphoto >= data.length) {
         currentphoto = 0;
     }
     loadphoto(currentphoto);
-    $(`#${photoNumber}`).addClass('selected');
 })
 
 $('.arrow.left').click(() => {
-    $('.selected').removeClass('selected');
     currentphoto--;
     if (currentphoto <= -1) {
         currentphoto = (data.length-1);
     }
     loadphoto(currentphoto)
-    $(`#${photoNumber}`).addClass('selected');
 })
 
 $('.title').hide()
